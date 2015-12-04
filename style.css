@@ -726,6 +726,10 @@ figure.effect-Beauty p {
 padding: 40px 0px;
 	}
 }
+.hero {
+  max-width: 952px;
+  width: 100%;
+}
 @media (min-width: 768px) and (max-width: 990px) {
 .social {
     margin-top: 10px;
