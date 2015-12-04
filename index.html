@@ -23,8 +23,11 @@
     <div class="row">
     <div class="col-md-12 line">
         <div class="tablebox">
-            <img src="images/weirdbanner.png" class="hero">
-
+          <div class="tablebox-inner">
+            <div class="tablebox-cell">
+              <img src="images/weirdbanner.png" class="hero">
+            </div>
+          </div>
 <!--         <div class="banner-text" id="bannertext">
             <h1 class="hostyle" id="heads">이상한모임</h1>
             <p class="pstyle">GoodBye 2015</p>
@@ -687,6 +690,7 @@ $(function(){
     if(windowH > bannerH) {                            
         $('#banner').css({'height':($(window).height() - 68)+'px'});
     $('#bannertext').css({'height':($(window).height() - 68)+'px'});
+    $('.tablebox').css({'height':($(window).height() - 68)+'px'});
     }                                                                               
     $(window).resize(function(){
         var windowH = $(window).height();
@@ -699,10 +703,12 @@ $(function(){
         if(windowH < truecontentH) {
             $('#banner').css({'height': (newH - 68)+'px'});
 			$('#bannertext').css({'height': (newH - 68)+'px'});
+      $('.tablebox').css({'height':(newH - 68)+'px'});
         }
 		if(windowH > truecontentH) {
             $('#banner').css({'height': (newH - 68)+'px'});
 			$('#bannertext').css({'height': (newH - 68)+'px'});
+      $('.tablebox').css({'height':(newH - 68)+'px'});
         }
 
     })          

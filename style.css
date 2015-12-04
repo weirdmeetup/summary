@@ -86,6 +86,14 @@
 	display: table;
 	width: 100%;
 }
+
+.tablebox-inner {
+  display: table-row;
+}
+.tablebox-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
 .hostyle
 {
 	font-family: 'Pacifico', cursive;
