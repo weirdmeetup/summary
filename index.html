@@ -15,6 +15,7 @@
   <script>
     $(window).load(function(){
       $("#menu").sticky({ topSpacing: 0 });
+      $(this).trigger('resize');
     });
   </script>
   </head>
@@ -23,8 +24,11 @@
     <div class="row">
     <div class="col-md-12 line">
         <div class="tablebox">
-            <img src="images/weirdbanner.png">
-
+          <div class="tablebox-inner">
+            <div class="tablebox-cell">
+              <img src="images/weirdbanner.png" class="hero">
+            </div>
+          </div>
 <!--         <div class="banner-text" id="bannertext">
             <h1 class="hostyle" id="heads">이상한모임</h1>
             <p class="pstyle">GoodBye 2015</p>
@@ -45,9 +49,15 @@
     <div>
     	<nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
         <ul class="nav navbar-nav navbar-right navstyle">
+<<<<<<< HEAD
         <li><a href="#intro" class="page-scroll active">Intro</a></li>
         <li><a href="#register" class="page-scroll">Register</a></li>
         <li><a href="#history" class="page-scroll">History</a></li>
+=======
+        <li><a href="#banner" class="page-scroll active">Intro</a></li>
+        <li><a href="#register" class="page-scroll">Register</a></li>
+        <li><a href="#gallery" class="page-scroll">History</a></li>
+>>>>>>> 05bb9dada5a3625bb0edc42df96ef993c298c86f
         <li><a href="#about" class="page-scroll">I.WEIRD.U</a></li>
         <li><a href="#contact" class="page-scroll">Contact</a></li>
       </ul>
@@ -56,7 +66,11 @@
   </div>
   </div>
 
+<<<<<<< HEAD
 <div class="features" id="intro">
+=======
+<div class="features" id="register">
+>>>>>>> 05bb9dada5a3625bb0edc42df96ef993c298c86f
     <div class="container">
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -680,25 +694,23 @@
 <script type="text/javascript" src="js/jquery.quovolver.js"></script>
 <script>
 $(function(){
-    var windowH = $(window).height();
-    var bannerH = $('#banner').height();
-    if(windowH > bannerH) {                            
-        $('#banner').css({'height':($(window).height() - 68)+'px'});
-		$('#bannertext').css({'height':($(window).height() - 68)+'px'});
-    }                                                                               
     $(window).resize(function(){
         var windowH = $(window).height();
         var bannerH = $('#banner').height();
+        var minimumBannerH = $('.hero').height() + 68;
         var differenceH = windowH - bannerH;
         var newH = bannerH + differenceH;
+        newH = newH < minimumBannerH ? minimumBannerH : newH;
         var truecontentH = $('#bannertext').height();
         if(windowH < truecontentH) {
             $('#banner').css({'height': (newH - 68)+'px'});
 			$('#bannertext').css({'height': (newH - 68)+'px'});
+      $('.tablebox').css({'height':(newH - 68)+'px'});
         }
 		if(windowH > truecontentH) {
             $('#banner').css({'height': (newH - 68)+'px'});
 			$('#bannertext').css({'height': (newH - 68)+'px'});
+      $('.tablebox').css({'height':(newH - 68)+'px'});
         }
 
     })          
