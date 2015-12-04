@@ -74,6 +74,7 @@
 			position: absolute;
 			width: 100%;
 			z-index: 0;
+            top: 0;
 }
 #menu::before {
     height: 1px;
