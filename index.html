@@ -15,6 +15,7 @@
   <script>
     $(window).load(function(){
       $("#menu").sticky({ topSpacing: 0 });
+      $(this).trigger('resize');
     });
   </script>
   </head>
@@ -684,14 +685,6 @@
 <script type="text/javascript" src="js/jquery.quovolver.js"></script>
 <script>
 $(function(){
-    var windowH = $(window).height();
-    var bannerH = $('#banner').height();
-    var minimumBannerH = $('.hero').height() + 68;
-    if(windowH > bannerH) {                            
-        $('#banner').css({'height':($(window).height() - 68)+'px'});
-    $('#bannertext').css({'height':($(window).height() - 68)+'px'});
-    $('.tablebox').css({'height':($(window).height() - 68)+'px'});
-    }                                                                               
     $(window).resize(function(){
         var windowH = $(window).height();
         var bannerH = $('#banner').height();
