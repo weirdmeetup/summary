@@ -1,0 +1,711 @@
+/* CSS Structure
+ *
+ * 1) HTML and BODY
+ *
+ * 2) Particles
+ *
+ * 3) Hero
+ *
+ * 4) Left Side
+ *
+ * 5) Right Side
+ *
+ * 6) More
+ *
+ */
+
+/*HTML and BODY*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+/*Particles*/
+.particles {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+}
+/*Hero*/
+.hero {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+}
+/*Left Side*/
+.hero .left-side {
+  width: 50vw;
+  float: left;
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+li {
+  font-size: 14px;
+  line-height: 1.6em;
+  color: #d8d8d8;
+}
+
+.highlight {
+  color: #fbbc05;
+}
+
+@media (max-width: 1170px) {
+  .hero .left-side {
+    width: 100vw;
+    float: none;
+  }
+}
+
+.hero .left-side .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 50px;
+  margin: 0;
+  font-family: Montserrat;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+.hero .left-side .logo:first-letter {
+  color: #fbbc05;
+}
+
+.hero .left-side .content {
+  padding: 100px 50px;
+  max-width: 700px;
+}
+
+.hero .left-side .content .project-name {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-size: 42px;
+  color: #111111;
+  position: relative;
+  padding-bottom: 30px;
+}
+
+.hero .left-side .content .project-name:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  left: 0;
+  height: 5px;
+  width: 100px;
+  background: #fbbc05;
+}
+
+.hero .left-side .content .description {
+  font-family: Open Sans;
+  color: #111111;
+  line-height: 1.8em;
+}
+
+.hero .left-side .content .button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #fbbc05;
+  border: solid 1px #fbbc05;
+  color: #111111;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: .15em;
+  transition: color .2s, background .2s;
+}
+
+.hero .left-side .content .button:hover {
+  color: #ffffff;
+  background: #2b303a;
+  border: solid 1px #2b303a;
+
+}
+
+.hero .left-side .content .button-more {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+/*  background: #2b303a;*/
+  border: solid 1px #2b303a;
+  color: #2b303a;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: .15em;
+  transition: color .2s, background .2s;
+}
+
+.hero .left-side .content .button-more:hover {
+  color: #ffffff;
+  background: #2b303a;
+  border: solid 1px #2b303a;
+  
+}
+
+.hero .left-side .social-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px 50px;
+}
+
+.hero .left-side .social-icons ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hero .left-side .social-icons ul li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.hero .left-side .social-icons ul li:first-child {
+  margin-left: 0;
+}
+
+.hero .left-side .social-icons ul li a {
+  font-size: 18px;
+  color: #111111;
+  transition: color .2s;
+}
+
+.hero .left-side .social-icons ul li a:hover {
+  color: #fbbc05;
+}
+/*Right Side*/
+.hero .right-side {
+  width: 50vw;
+  background: #fbbc05;
+  background-size: cover;
+  float: right;
+  box-sizing: border-box;
+  padding: 20px 50px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero .right-side .content .button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background: #fbbc05;
+  color: #111111;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: .15em;
+  transition: color .2s, background .2s;
+}
+
+
+@media (max-width: 1170px) {
+  .hero .right-side {
+    width: 100vw;
+    float: none;
+  }
+}
+
+.hero .right-side .content {
+  padding: 0 10px;
+}
+
+.hero .right-side:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.hero .right-side .heading {
+  color: #ffffff;
+  font-family: Montserrat;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 36px;
+  text-align: center;
+}
+
+.hero .right-side .heading span {
+  color: #fbbc05;
+}
+
+.hero .right-side .description {
+  color: #ffffff;
+  font-family: Open Sans;
+  font-size: 16px;
+  text-align: center;
+  line-height: 2em;
+  letter-spacing: .07em;
+  max-width: 700px;
+}
+
+.hero .right-side .countdown .count-box {
+  display: inline-block;
+  color: #ffffff;
+  font-family: Montserrat;
+  width: 25%;
+  height: 25%;
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  .hero .right-side .countdown .count-box {
+    width: 50%;
+    height: 50%;
+  }
+}
+
+.hero .right-side .countdown .count-box .countdown-num {
+  font-size: 48px;
+  margin: 10px 0;
+}
+
+.hero .right-side .countdown .count-box h4 {
+  font-family: Open Sans;
+}
+
+.hero .right-side .countdown .count-box h4:first-letter {
+  text-transform: uppercase;
+  color: #fbbc05;
+}
+
+.hero .right-side .subscribe {
+  position: relative;
+  right: -50vw;
+  width: 300px;
+  margin: 30px auto 0;
+  transition: right .5s;
+}
+
+@media (max-width: 1170px) {
+  .hero .right-side .subscribe {
+    right: 0;
+  }
+}
+
+.hero .right-side .subscribe.active {
+  right: 0;
+}
+
+.hero .right-side .subscribe .email {
+  border: none;
+  background: #ffffff;
+  padding: 10px;
+  font-family: Open Sans;
+  display: block;
+  color: #111111;
+  height: 40px;
+  box-sizing: border-box;
+  float: left;
+  min-width: 200px;
+}
+
+.hero .right-side .subscribe .email:focus {
+  outline: none;
+}
+
+.hero .right-side .subscribe .submit {
+  min-width: 100px;
+  float: right;
+  display: block;
+  color: #111111;
+  background: #fbbc05;
+  border: none;
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: Montserrat;
+  letter-spacing: .15em;
+  font-size: 10px;
+  height: 40px;
+  box-sizing: border-box;
+  transition: background .2s, color .2s;
+  cursor: pointer;
+}
+
+.hero .right-side .subscribe .submit:hover {
+  color: #ffffff;
+  background: #111111;
+}
+
+.hero .right-side .subscribe .submit:focus {
+  outline: none;
+}
+
+.hero .right-side .subscribe .subscribe-response {
+  color: #ffffff;
+  font-family: Open Sans;
+  font-size: 12px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  color: transparent;
+  transition: color .2s;
+}
+
+.hero .right-side .subscribe .subscribe-response.active {
+  color: #ffffff;
+}
+/*More*/
+.hero .more {
+  height: 100vh;
+  position: absolute;
+  width: 50vw;
+  background: #15181e;
+  top: 0;
+  right: -50vw;
+  box-sizing: border-box;
+  color: #ffffff;
+  overflow: hidden;
+  transition: right .5s;
+}
+
+@media (max-width: 1170px) {
+  .hero .more {
+    height: 200vh;
+    width: 100vw;
+    right: -100vw;
+  }
+}
+
+.hero .more.active {
+  right: 0;
+}
+
+.hero .more .exit {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  padding: 15px;
+  cursor: pointer;
+  font-family: Montserrat;
+}
+
+.hero .more .content {
+  max-width: 700px;
+  padding: 0 100px;
+  margin: auto;
+}
+
+@media (max-width: 719px) {
+  .hero .more .content {
+    padding: 0 30px;
+  }
+}
+
+.hero .more .content .center {
+  text-align: center;
+}
+
+.hero .more h1 {
+  font-family: Montserrat;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.hero .more h1:first-letter {
+  color: #fbbc05;
+}
+
+.hero .more h2 {
+  font-family: Montserrat;
+  letter-spacing: .2em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.hero .more p {
+  font-family: Open Sans;
+  line-height: 1.7em;
+  font-size: 16px;
+}
+
+.hero .more .service-block {
+  margin-top: 40px;
+}
+
+.hero .more .service-block i {
+  display: inline-block;
+  color: #fbbc05;
+}
+
+.hero .more .service-block h3 {
+  display: inline-block;
+  font-family: Montserrat;
+  padding-left: 10px;
+  letter-spacing: .05em;
+  margin: 0;
+}
+
+.hero .more .works {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 50vw;
+}
+
+@media (max-width: 1170px) {
+  .hero .more .works {
+    width: 100vw;
+  }
+}
+
+.hero .more .works .work {
+  width: 25vw;
+  height: 25vw;
+  float: left;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1170px) {
+  .hero .more .works .work {
+    width: 50vw;
+    height: 50vw;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero .more .works .work {
+    width: 100vw;
+    height: 100vw;
+  }
+}
+
+.hero .more .works .work:hover .content {
+  top: 0;
+}
+
+.hero .more .works .work .content {
+  position: absolute;
+  z-index: 1;
+  top: 50vw;
+  left: 0;
+  background: #fbbc05;
+  color: #111111;
+  height: 25vw;
+  width: 25vw;
+  box-sizing: border-box;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: top .5s;
+}
+
+@media (max-width: 1170px) {
+  .hero .more .works .work .content {
+    height: 50vw;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 719px) {
+  .hero .more .works .work .content {
+    height: 100vw;
+    width: 100vw;
+    top: 100vw;
+  }
+}
+
+.hero .more .works .work .content h3 {
+  font-family: Montserrat;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  text-align: center;
+}
+
+.hero .more .works .work .content p {
+  font-family: Open Sans;
+  text-align: center;
+}
+
+.hero .more .contact-form {
+  margin-top: 50px;
+}
+
+.hero .more .contact-form .name,
+.hero .more .contact-form .email,
+.hero .more .contact-form .message {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.hero .more .contact-form .name label,
+.hero .more .contact-form .email label,
+.hero .more .contact-form .message label {
+  padding-bottom: 10px;
+  display: block;
+  text-transform: capitalize;
+  letter-spacing: .2em;
+  font-size: 12px;
+  font-family: Open Sans;
+}
+
+.hero .more .contact-form .name label:first-letter,
+.hero .more .contact-form .email label:first-letter,
+.hero .more .contact-form .message label:first-letter {
+  font-weight: bold;
+  color: #fbbc05;
+}
+
+.hero .more .contact-form .name input,
+.hero .more .contact-form .name textarea,
+.hero .more .contact-form .email input,
+.hero .more .contact-form .email textarea,
+.hero .more .contact-form .message input,
+.hero .more .contact-form .message textarea {
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: #111111;
+  border: 0;
+  color: white;
+  padding: 10px 10px;
+  box-sizing: border-box;
+}
+
+.hero .more .contact-form .name input:focus,
+.hero .more .contact-form .name textarea:focus,
+.hero .more .contact-form .email input:focus,
+.hero .more .contact-form .email textarea:focus,
+.hero .more .contact-form .message input:focus,
+.hero .more .contact-form .message textarea:focus {
+  outline: none;
+}
+
+.hero .more .contact-form .name textarea,
+.hero .more .contact-form .email textarea,
+.hero .more .contact-form .message textarea {
+  resize: vertical;
+}
+
+.hero .more .contact-form .name,
+.hero .more .contact-form .email {
+  width: 45%;
+  height: 40px;
+  display: inline-block;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 719px) {
+  .hero .more .contact-form .name,
+  .hero .more .contact-form .email {
+    width: 100%;
+  }
+}
+
+.hero .more .contact-form .name {
+  margin-right: 9%;
+}
+
+@media (max-width: 719px) {
+  .hero .more .contact-form .name {
+    marign: 0;
+  }
+}
+
+.hero .more .contact-form .submit {
+  width: 100%;
+}
+
+.hero .more .contact-form .submit input {
+  width: 100%;
+  display: block;
+  margin-top: 40px;
+  height: 40px;
+  border: none;
+  background: #ffffff;
+  font-family: Roboto;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color .2s, background .2s;
+}
+
+.hero .more .contact-form .submit input:hover {
+  color: #fbbc05;
+  background: #111111;
+}
+
+.hero .more .contact-form .submit input:focus {
+  outline: none;
+}
+
+.hero .more .contact-form .contact-result {
+  text-align: center;
+  color: #212121;
+  transition: color .2s;
+}
+
+.hero .more .contact-form .contact-result.submited {
+  color: #ffffff;
+}
+
+.hero .more .info {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  list-style-type: none;
+  margin-bottom: 50px;
+}
+
+.hero .more .info .info-block {
+  min-width: 140px;
+  display: inline-block;
+  text-align: center;
+}
+
+@media (max-width: 719px) {
+  .hero .more .info .info-block {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+}
+
+.hero .more .info .info-block i {
+  font-size: 28px;
+  color: #fbbc05;
+  margin-bottom: 20px;
+}
+
+.hero .more .info .info-block p {
+  line-height: 1em;
+}
